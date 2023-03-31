@@ -1,5 +1,10 @@
+@use './typography' as *;
 
-
+// Primary Colors
 $loblawBlack: #191919;
 $loblawRed: #e1251b;
 $loblawDarkGrey: #333333;
+
+// Fonts
+$noir: 'Noir', sans-serif;
+$sharpGrotesk: 'SharpGrotesk', sans-serif;

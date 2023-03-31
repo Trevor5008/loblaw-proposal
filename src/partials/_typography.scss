@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@800&display=swap');
+@font-face {
+   font-family: 'Noir';
+   src: url('../assets/fonts/NoirStd-Regular.ttf') format('truetype');
+}
 
-// Font variables
-$grotesk: 'Hanken Grotesk', sans-serif;
+@font-face {
+   font-family: 'SharpGrotesk';
+   src: url('../assets/fonts/SharpGroteskBold15.ttf') format('truetype');
+   font-weight: bold;
+}
+
+@font-face {
+   font-family: 'SharpGrotesk';
+   src: url('../assets/fonts/SharpGroteskBold25.ttf') format('truetype');
+   font-weight: bolder;
+}

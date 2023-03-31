@@ -41,10 +41,11 @@
 
 .welcome__text {
   text-transform: uppercase;
-  font-family: $grotesk;
+  font-family: $sharpGrotesk;
   margin: 0.5rem 2rem 1rem;
   font-size: 3rem;
   letter-spacing: 0.05px;
+  font-weight: bolder;
 }
 
 .banner {
@@ -84,7 +85,7 @@
     text-transform: uppercase;
   }
   &__title {
-    font-weight: 700;
+    font-family: $sharpGrotesk;
     font-size: 2rem;
   }
   &__icons{
@@ -101,8 +102,10 @@
     color: #656B73;
   }
   &__subtitle{
+      font-family: $noir;
     font-size: 1.25rem;
     padding-left: 1.75rem;
+    color: $loblawDarkGrey;
     font-weight: 200;
   }
 }
