@@ -2,6 +2,11 @@
 @use "../../partials/variables" as *;
 
 .preferences{
+    &__title{
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem 0 1.5rem; 
+    }
     &__generic {
     border-radius: 3rem;
     //border: 1px solid grey;
@@ -29,4 +34,10 @@
     background-color: #FBFBFB;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+}
+
+#preferences-label{
+    font-size: 1.25rem;
+    color: $loblawBlack;
+    text-decoration: underline;
 }

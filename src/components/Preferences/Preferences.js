@@ -11,7 +11,7 @@ function Preferences () {
         <h2 className="preferences__title">Preferences</h2>
         <div className="preferences__generic">
           <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">Generic</FormLabel>
+            <FormLabel id="preferences-label">Generic</FormLabel>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
               defaultValue="always"
@@ -37,7 +37,7 @@ function Preferences () {
         </div>
         <div className="preferences__price">
           <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
+            <FormLabel id="preferences-label">Price</FormLabel>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
               defaultValue="always"
@@ -58,7 +58,7 @@ function Preferences () {
         </div>
         <div className="preferences__replacements">
           <FormControl>
-            <FormLabel id="demo-radio-buttons-group-label">
+            <FormLabel id="preferences-label">
               Replacements
             </FormLabel>
             <RadioGroup
@@ -84,7 +84,7 @@ function Preferences () {
               <FormControlLabel
                 value="remove-from-order"
                 control={<Radio />}
-                label="Remove From Order"
+                label="Remove from Order"
               />
             </RadioGroup>
           </FormControl>
