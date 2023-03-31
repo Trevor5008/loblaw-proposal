@@ -34,29 +34,62 @@ function Preferences () {
               />
             </RadioGroup>
           </FormControl>
-          </div>
-          <div className="preferences__price">
-            <FormControl>
-              <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
-              <RadioGroup
-                aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="always"
-                name="radio-buttons-group"
-              >
-                <FormControlLabel
-                  value="cheapest"
-                  control={<Radio />}
-                  label="Cheapest"
-                />
-                <FormControlLabel
-                  value="best-value"
-                  control={<Radio />}
-                  label="Best Value"
-                />
-              </RadioGroup>
-            </FormControl>
-          </div>
         </div>
+        <div className="preferences__price">
+          <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="always"
+              name="radio-buttons-group"
+            >
+              <FormControlLabel
+                value="cheapest"
+                control={<Radio />}
+                label="Cheapest"
+              />
+              <FormControlLabel
+                value="best-value"
+                control={<Radio />}
+                label="Best Value"
+              />
+            </RadioGroup>
+          </FormControl>
+        </div>
+        <div className="preferences__replacements">
+          <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label">
+              Replacements
+            </FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="always"
+              name="radio-buttons-group"
+            >
+              <FormControlLabel
+                value="cheapest"
+                control={<Radio />}
+                label="Cheapest"
+              />
+              <FormControlLabel
+                value="best-match"
+                control={<Radio />}
+                label="Best Match"
+              />
+              <FormControlLabel
+                value="ask-me"
+                control={<Radio />}
+                label="Ask Me"
+              />
+              <FormControlLabel
+                value="remove-from-order"
+                control={<Radio />}
+                label="Remove From Order"
+              />
+            </RadioGroup>
+          </FormControl>
+        </div>
+      </div>
     );
 }
 
