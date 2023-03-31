@@ -9,6 +9,7 @@ import Input from '@mui/joy/Input';
 import Button from '@mui/joy/Button';
 import Slider from "@mui/material/Slider";
 import { AttachMoney } from '@mui/icons-material';
+import PreferencePage from './pages/Preferences/PreferencePage';
 
 function App() {
    const [userData, setUserData] = useState(null);

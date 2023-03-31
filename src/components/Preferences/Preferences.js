@@ -4,6 +4,8 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 function Preferences () {
     return (
@@ -58,9 +60,7 @@ function Preferences () {
         </div>
         <div className="preferences__replacements">
           <FormControl>
-            <FormLabel id="preferences-label">
-              Replacements
-            </FormLabel>
+            <FormLabel id="preferences-label">Replacements</FormLabel>
             <RadioGroup
               aria-labelledby="demo-radio-buttons-group-label"
               defaultValue="always"
@@ -89,6 +89,9 @@ function Preferences () {
             </RadioGroup>
           </FormControl>
         </div>
+        <Stack className="preferences__button" spacing={2} direction="row">
+          <Button className="preferences__save" variant="contained">Save</Button>
+        </Stack>
       </div>
     );
 }

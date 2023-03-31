@@ -11,6 +11,7 @@ import InputBase from "@mui/material/InputBase";
 import bob from "../../assets/logos/bob_loblaw_icon.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 function Header () {
     const Search = styled("div")(({ theme }) => ({
