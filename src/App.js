@@ -10,6 +10,7 @@ import Button from '@mui/joy/Button';
 import Slider from "@mui/material/Slider";
 import { AttachMoney } from '@mui/icons-material';
 import PreferencePage from './pages/Preferences/PreferencePage';
+import BudgetProfile from './pages/BudgetProfile/BudgetProfile';
 
 function App() {
    const [userData, setUserData] = useState(null);
@@ -78,6 +79,7 @@ function App() {
      <div className="App">
        <Box className="navBox">
          <Header />
+         <BudgetProfile />
          {/* <AppBar position="static">
            <Toolbar className="navBox__toolbar">
              <IconButton
