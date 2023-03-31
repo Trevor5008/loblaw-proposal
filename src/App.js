@@ -19,7 +19,7 @@ function App() {
                      edge="start"
                      color="inherit"
                      aria-label="menu"
-                     sx={{ mr: 2 }}
+                     sx={{ position: "fixed", mr: 2 }}
                   >
                      <MenuIcon />
                   </IconButton>
