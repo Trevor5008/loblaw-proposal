@@ -6,6 +6,7 @@
         font-size: 2rem;
         text-transform: uppercase;
         padding: 1rem 1.5rem 0 1.5rem; 
+        font-family: $sharpGrotesk;
     }
     &__generic {
     border-radius: 3rem;
@@ -39,6 +40,8 @@
     }
     &__save.MuiButtonBase-root{
         background-color: #00817F;
+        margin: 0 auto;
+        width: 35%;
     }
 }
 

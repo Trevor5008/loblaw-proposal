@@ -11,7 +11,6 @@ import Slider from "@mui/material/Slider";
 import { AttachMoney } from '@mui/icons-material';
 import PreferencePage from './pages/Preferences/PreferencePage';
 import BudgetProfile from './pages/BudgetProfile/BudgetProfile';
-import  {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
 function App() {
@@ -95,7 +94,7 @@ function App() {
       let { name, value } = e.target;
       value = parseInt(value);
 
-      switch(name) {
+      switch (name) {
          case 'vegetable':
             setVeggieTotal(value);
             break;
@@ -141,10 +140,12 @@ function App() {
                <ChartIcon />
             </div>
          </div>
-         <Budget 
-            userData={userData} 
+         <PreferencePage />
+
+         <Budget
+            userData={userData}
             budgetTotal={budgetTotal}
-            handleSubmit={handleSubmit} 
+            handleSubmit={handleSubmit}
             handleChange={handleChange}
             veggieTotal={veggieTotal}
             meatTotal={meatTotal}
@@ -152,8 +153,10 @@ function App() {
             drinksTotal={drinksTotal}
             snacksTotal={snacksTotal}
          />
-         <div className="container">
-            <Button className="next__btn">Next</Button>
+
+         <div className="btn_container">
+            <Button
+               className="next__btn">Next</Button>
          </div>
          <Footer />
       </div>
