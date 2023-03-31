@@ -13,6 +13,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Header from './components/Header/Header';
+import WindowIcon from '@mui/icons-material/Window';
+import BulletList from "@mui/icons-material/FormatListBulleted";
+import ChartIcon from  '@mui/icons-material/InsertChartOutlined';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -91,21 +94,28 @@ function App() {
            inputProps={{ "aria-label": "search" }}
          />
        </Search>
-      <h1 className="welcome__text">Welcome You!</h1>
+       <h1 className="welcome__text">Welcome You!</h1>
        {/* <Form /> */}
        <section className="banner">
          <div className="banner__item">
-            <h3 className="banner__text">Spent this Month</h3>
-            <h2 className="banner__value">$10</h2>
+           <h3 className="banner__text">Spent this Month</h3>
+           <h2 className="banner__value">$10</h2>
          </div>
          <div className="banner__item">
-            <h3 className="banner__text">Saved this Month</h3>
-            <h2 className="banner__value">$10</h2>
+           <h3 className="banner__text">Saved this Month</h3>
+           <h2 className="banner__value">$10</h2>
          </div>
        </section>
-       <section className="budget">
-         <h2 className="budget__title">My Budget</h2>
-       </section>
+       <div className="budget">
+         <section className="budget__section">
+           <h2 className="budget__title">My Budget</h2>
+         </section>
+         <div className='budget__icons'>
+           <WindowIcon />
+           <BulletList />
+           <ChartIcon />
+         </div>
+       </div>
      </div>
    );
 }
