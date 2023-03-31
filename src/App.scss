@@ -1,4 +1,6 @@
 @use './partials/_variables.scss' as *;
+@use './partials/_typography.scss' as *;
+
 
 .navBox { 
     width: 100%;
@@ -38,5 +40,47 @@
     background-color: white;
 }
 
+.welcome__text {
+   text-transform: uppercase;
+   font-family: $grotesk;
+   margin: 0.5rem 2rem 1rem;
+   font-size: 3rem;
+   letter-spacing: .05px;
+}
 
-// 
+.banner {
+   // height: 3rem;
+   width: 100vw;
+   background-color: #83000c;
+   border: 2.5px solid $loblawRed;
+   display: flex;
+   justify-content: space-evenly;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+   
+   &__text,
+   &__value {
+      color: white;
+   }
+
+   &__text {
+      font-size: 1.3rem;
+   }
+
+   &__value {
+      font-size: 3rem;
+      font-weight: 100;
+      text-align: center;
+      margin-top: .5rem;
+   }
+}
+
+.budget {
+   margin: 2rem 1rem;
+   text-transform: uppercase;
+
+   &__title {
+      font-weight: 700;
+      font-size: 2rem;
+   }
+}
