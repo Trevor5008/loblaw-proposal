@@ -1,41 +1,23 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Box from '@mui/material/Box';
 import './App.scss';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import BulletList from "@mui/icons-material/FormatListBulleted";
 import ChartIcon from '@mui/icons-material/PieChartOutline';
-import Input from '@mui/joy/Input';
+import Budget from './components/Budget/Budget';
 import Button from '@mui/joy/Button';
-import Slider from "@mui/material/Slider";
-import { AttachMoney } from '@mui/icons-material';
 
 function App() {
    const [userData, setUserData] = useState(null);
    const [userName, setUserName] = useState("");
    const [totalSpent, setTotalSpent] = useState(0);
    const [budgetTotal, setBudgetTotal] = useState(0);
-   const [budgetVal, setBudgetVal] = useState(0);
    const [veggieTotal, setVeggieTotal] = useState(0);
    const [meatTotal, setMeatTotal] = useState(0);
    const [dairyTotal, setDairyTotal] = useState(0);
    const [drinksTotal, setDrinksTotal] = useState(0);
    const [snacksTotal, setSnacksTotal] = useState(0);
-
-   const marks = [
-      {
-         value: 0,
-         label: '$0'
-      },
-      {
-         value: 50,
-         label: '$50'
-      },
-      {
-         value: 300,
-         label: '$300'
-      }
-   ];
 
    const BASE_URL = "http://localhost:8080";
 
@@ -88,9 +70,19 @@ function App() {
       return <h2>Loading...</h2>;
    }
 
+   function resetCategoryTotals() {
+      setMeatTotal(0);
+      setDairyTotal(0);
+      setDrinksTotal(0);
+      setVeggieTotal(0);
+      setSnacksTotal(0);
+   }
+
    function handleSubmit(e) {
       e.preventDefault();
-      setBudgetTotal(budgetVal);
+      let value = parseInt(e.target.budget.value);
+      setBudgetTotal(value);
+      resetCategoryTotals();
    }
 
    function handleChange(e) {
@@ -143,75 +135,21 @@ function App() {
                <ChartIcon />
             </div>
          </div>
-
-         <Box width={300}>
-            <form onSubmit={(e) => handleSubmit(e)}>
-               <Input
-                  className='budget__input'
-                  placeholder={budgetTotal}
-                  startDecorator={<AttachMoney />}
-                  endDecorator={<Button type="submit">Set Budget</Button>}
-                  name="budget"
-                  onChange={(e) => handleChange(e)}
-               />
-            </form>
-
-            <h2 className="budget__subtitle">Vegetable</h2>
-            <Slider
-               className="budget__slider"
-               defaultValue={veggieTotal}
-               max={budgetTotal}
-               aria-label="Small"
-               valueLabelDisplay="on"
-               marks={marks}
-               name='vegetable'
-               onChange={(e) => handleChange(e)}
-            />
-            <h2 className="budget__subtitle">Dairy</h2>
-            <Slider
-               className="budget__slider"
-               defaultValue={dairyTotal}
-               max={budgetTotal}
-               aria-label="Default"
-               valueLabelDisplay="auto"
-               marks={marks}
-               name='dairy'
-               onChange={(e) => handleChange(e)}
-            />
-            <h2 className="budget__subtitle">Meat</h2>
-            <Slider
-               className="budget__slider"
-               defaultValue={meatTotal}
-               max={budgetTotal}
-               aria-label="Default"
-               valueLabelDisplay="on"
-               marks={marks}
-               name='meat'
-               onChange={(e) => handleChange(e)}
-            />
-            <h2 className="budget__subtitle">Drinks</h2>
-            <Slider
-               className="budget__slider"
-               defaultValue={drinksTotal}
-               aria-label="Default"
-               max={budgetTotal}
-               valueLabelDisplay="on"
-               marks={marks}
-               name='drinks'
-               onChange={(e) => handleChange(e)}
-            />
-            <h2 className="budget__subtitle">Snacks</h2>
-            <Slider
-               className="budget__slider"
-               defaultValue={snacksTotal}
-               aria-label="Default"
-               max={budgetTotal}
-               valueLabelDisplay="on"
-               marks={marks}
-               name='snacks'
-               onChange={(e) => handleChange(e)}
-            />
-         </Box>
+         <Budget 
+            userData={userData} 
+            budgetTotal={budgetTotal}
+            handleSubmit={handleSubmit} 
+            handleChange={handleChange}
+            veggieTotal={veggieTotal}
+            meatTotal={meatTotal}
+            dairyTotal={dairyTotal}
+            drinksTotal={drinksTotal}
+            snacksTotal={snacksTotal}
+         />
+         <div className="container">
+            <Button className="next__btn">Next</Button>
+         </div>
+         <Footer />
       </div>
    );
 }

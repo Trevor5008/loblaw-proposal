@@ -4,7 +4,19 @@
 $loblawBlack: #191919;
 $loblawRed: #e1251b;
 $loblawDarkGrey: #333333;
+$loblawDarkGreen: #00817F;
 
 // Fonts
 $noir: 'Noir', sans-serif;
 $sharpGrotesk: 'SharpGrotesk', sans-serif;
+
+@mixin tablet{
+   @media (min-width: 768px) and (max-width: 1279px) {
+       @content;
+   }
+}
+@mixin desktop{
+   @media (min-width: 1280px) and (max-width: 1920px) {
+       @content;
+   }
+}

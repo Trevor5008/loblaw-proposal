@@ -75,46 +75,20 @@
   }
 }
 
-.budget {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  &__section {
-    margin: 2rem 1rem;
-    text-transform: uppercase;
-  }
-  &__title {
-    font-family: $sharpGrotesk;
-    font-size: 2rem;
-  }
-  &__icons{
-    color: #656B73;
-    width: 10rem;
-    display: inline-flex;
-    justify-content: space-around;
-    padding: 0 .5rem;
-  }
-  &__slider.MuiSlider-root{
-    height: 1rem;
-    padding: 2rem 1rem;
-    margin-left: 1.5rem;
-    color: #656B73;
-  }
-  &__subtitle{
-      font-family: $noir;
-    font-size: 1.25rem;
-    padding-left: 1.75rem;
-    color: $loblawDarkGrey;
-    font-weight: 200;
-  }
-
-  &__input {
-    margin: 1rem;
-
-
-  }
-
+.container {
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 2rem;
 }
-
-
+.next__btn.MuiButton-root {
+   background-color: $loblawDarkGreen;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 4px;
+   width: 93px;
+   height: 44px;
+   font-family: $noir;
+   text-transform: uppercase;
+   font-size: 1.4rem;
+   font-weight: 400;
+}

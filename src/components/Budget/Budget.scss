@@ -1,0 +1,65 @@
+@use "../../partials/variables" as *;
+@use "../../partials/_typography.scss" as *;
+
+.budget {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+
+   &__section {
+      margin: 2rem 1rem;
+      text-transform: uppercase;
+   }
+
+   &__title {
+      font-family: $sharpGrotesk;
+      font-size: 2rem;
+   }
+
+   &__icons {
+      color: #656B73;
+      width: 10rem;
+      display: inline-flex;
+      justify-content: space-around;
+      padding: 0 .5rem;
+   }
+
+   &__form {
+      margin-bottom: 1.5rem;
+   }
+
+   &__slider.MuiSlider-root {
+      height: 1rem;
+      padding: 2rem 1rem;
+      margin-left: 2.25rem;
+      color: #656B73;
+   }
+
+   &__subtitle {
+      font-family: $noir;
+      font-size: 1.25rem;
+      padding-left: 1.75rem;
+      color: $loblawDarkGrey;
+      font-weight: 200;
+   }
+
+   &__input.MuiInput-root.MuiInput-variantOutlined {
+      margin-left: 2rem;
+      width: 60vw;
+
+   }
+
+}
+
+.MuiButton-root.MuiButton-variantSolid,
+.MuiButton-root.MuiButton-variantSolid:active {
+   background-color: $loblawDarkGreen;
+   font-family: $noir;
+   font-weight: 400;
+}
+
+.MuiSlider-markLabel.MuiSlider-markLabel {
+   font-size: 1rem;
+   font-family: $noir;
+   margin-top: 1rem;
+}
