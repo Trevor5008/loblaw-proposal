@@ -10,6 +10,21 @@ import Button from '@mui/joy/Button';
 import Slider from "@mui/material/Slider";
 import { AttachMoney } from '@mui/icons-material';
 
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  "&:hover": {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
+    marginLeft: theme.spacing(1),
+    width: "auto",
+  },
+}));
+
 function App() {
    const [userData, setUserData] = useState(null);
    const [userName, setUserName] = useState("");
@@ -75,6 +90,38 @@ function App() {
 
    return (
      <div className="App">
+       <Box className="navBox">
+         <AppBar position="static">
+           <Toolbar className="navBox__toolbar">
+             <IconButton
+               size="large"
+               edge="start"
+               color="inherit"
+               aria-label="menu"
+               className="navBox__btn"
+             >
+               <MenuIcon />
+               <Image src={bob} className="navBox__logo" duration={0} />
+             </IconButton>
+             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+               News
+             </Typography>
+             <Button color="inherit">Login</Button>
+           </Toolbar>
+         </AppBar>
+         <Header />
+       </Box>
+       <Search id="search">
+         <SearchIconWrapper className="nav__search-icon">
+           <SearchIcon />
+         </SearchIconWrapper>
+         <StyledInputBase
+           className="nav__search-input"
+           placeholder="Search for product"
+           inputProps={{ "aria-label": "search" }}
+         />
+       </Search>
+
        <Header />
 
        <h1 className="welcome__text">Welcome {userName}!</h1>
