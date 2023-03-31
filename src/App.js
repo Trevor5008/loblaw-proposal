@@ -11,6 +11,8 @@ import Slider from "@mui/material/Slider";
 import { AttachMoney } from '@mui/icons-material';
 import PreferencePage from './pages/Preferences/PreferencePage';
 import BudgetProfile from './pages/BudgetProfile/BudgetProfile';
+import  {BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 function App() {
    const [userData, setUserData] = useState(null);
