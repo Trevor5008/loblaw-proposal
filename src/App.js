@@ -13,9 +13,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Header from './components/Header/Header';
-import WindowIcon from '@mui/icons-material/Window';
 import BulletList from "@mui/icons-material/FormatListBulleted";
-import ChartIcon from  '@mui/icons-material/InsertChartOutlined';
+import ChartIcon from  '@mui/icons-material/PieChartOutline';
+import Slider from "@mui/material/Slider";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -110,12 +110,41 @@ function App() {
          <section className="budget__section">
            <h2 className="budget__title">My Budget</h2>
          </section>
-         <div className='budget__icons'>
-           <WindowIcon />
+         <div className="budget__icons">
            <BulletList />
            <ChartIcon />
          </div>
        </div>
+       <Box width={300}>
+         <h2 className="budget__subtitle">Vegetable</h2>
+         <Slider
+           className="budget__slider"
+           defaultValue={70}
+           aria-label="Small"
+           valueLabelDisplay="auto"
+         />
+         <h2 className="budget__subtitle">Dairy</h2>
+         <Slider
+           className="budget__slider"
+           defaultValue={50}
+           aria-label="Default"
+           valueLabelDisplay="auto"
+         />
+         <h2 className="budget__subtitle">Meat</h2>
+         <Slider
+           className="budget__slider"
+           defaultValue={50}
+           aria-label="Default"
+           valueLabelDisplay="auto"
+         />
+         <h2 className="budget__subtitle">Drinks</h2>
+         <Slider
+           className="budget__slider"
+           defaultValue={50}
+           aria-label="Default"
+           valueLabelDisplay="auto"
+         />
+       </Box>
      </div>
    );
 }
