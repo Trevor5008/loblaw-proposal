@@ -79,7 +79,7 @@ function App() {
      <div className="App">
        <Box className="navBox">
          <Header />
-         <BudgetProfile />
+         {/* <BudgetProfile /> */}
          {/* <AppBar position="static">
            <Toolbar className="navBox__toolbar">
              <IconButton
