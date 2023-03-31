@@ -1,0 +1,12 @@
+@use "../../partials/typography" as *;
+@use "../../partials/variables" as *;
+
+.preferences{
+    &__bubble {
+    border-radius: 3rem;
+    border: 1px solid grey;
+    padding: 1.5rem;
+    width: calc(100% - 3rem);
+    margin: 1.5rem;
+    }
+}

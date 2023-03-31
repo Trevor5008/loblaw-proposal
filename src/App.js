@@ -92,6 +92,7 @@ function App() {
            inputProps={{ "aria-label": "search" }}
          />
        </Search>
+       <Preferences />
 
       <h1 className="welcome__text">Welcome You!</h1>
        {/* <Form /> */}

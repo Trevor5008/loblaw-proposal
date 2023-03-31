@@ -9,22 +9,32 @@ function Preferences () {
     return (
       <div className="preferences">
         <h2 className="preferences__title">Preferences</h2>
-        <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="female"
-            name="radio-buttons-group"
-          >
-            <FormControlLabel
-              value="female"
-              control={<Radio />}
-              label="Female"
-            />
-            <FormControlLabel value="male" control={<Radio />} label="Male" />
-            <FormControlLabel value="other" control={<Radio />} label="Other" />
-          </RadioGroup>
-        </FormControl>
+        <div className="preferences__bubble">
+          <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label">Generic</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="always"
+              name="radio-buttons-group"
+            >
+              <FormControlLabel
+                value="always"
+                control={<Radio />}
+                label="Always"
+              />
+              <FormControlLabel
+                value="when-cheapest"
+                control={<Radio />}
+                label="When Cheapest"
+              />
+              <FormControlLabel
+                value="never"
+                control={<Radio />}
+                label="Never"
+              />
+            </RadioGroup>
+          </FormControl>
+        </div>
       </div>
     );
 }
