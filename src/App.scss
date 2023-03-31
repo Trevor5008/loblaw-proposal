@@ -10,14 +10,32 @@
     background-color: $loblawBlack;
     }
 
-    &__logo {
+    &__logo.mui-image-img {
         display: flex;
-        
+        transition: 0;
+        transition-duration: 0s;
+        transition-property: none;
+        animation: none;
     }
 
     &__btn.MuiButtonBase-root  {
         padding: 0 12px;
     }
+}
+
+#search{
+    background-color: $loblawDarkGrey;
+    border-radius: 0;
+}
+.nav__search-icon{
+   z-index: 1;
+    margin-left: 1rem;
+}
+.nav__search-input.MuiInputBase-root{
+    width: calc(100% - 24px);
+    border-radius: .75rem;
+    margin: .25rem .75rem;
+    background-color: white;
 }
 
 
