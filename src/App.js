@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Form from './components/Form/Form';
 import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
    return (
