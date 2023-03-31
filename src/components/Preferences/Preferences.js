@@ -9,7 +9,7 @@ function Preferences () {
     return (
       <div className="preferences">
         <h2 className="preferences__title">Preferences</h2>
-        <div className="preferences__bubble">
+        <div className="preferences__generic">
           <FormControl>
             <FormLabel id="demo-radio-buttons-group-label">Generic</FormLabel>
             <RadioGroup
@@ -34,8 +34,29 @@ function Preferences () {
               />
             </RadioGroup>
           </FormControl>
+          </div>
+          <div className="preferences__price">
+            <FormControl>
+              <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
+              <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                defaultValue="always"
+                name="radio-buttons-group"
+              >
+                <FormControlLabel
+                  value="cheapest"
+                  control={<Radio />}
+                  label="Cheapest"
+                />
+                <FormControlLabel
+                  value="best-value"
+                  control={<Radio />}
+                  label="Best Value"
+                />
+              </RadioGroup>
+            </FormControl>
+          </div>
         </div>
-      </div>
     );
 }
 
