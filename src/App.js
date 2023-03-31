@@ -7,6 +7,10 @@ import BulletList from "@mui/icons-material/FormatListBulleted";
 import ChartIcon from '@mui/icons-material/PieChartOutline';
 import Budget from './components/Budget/Budget';
 import Button from '@mui/joy/Button';
+import Slider from "@mui/material/Slider";
+import { AttachMoney } from '@mui/icons-material';
+import PreferencePage from './pages/Preferences/PreferencePage';
+import BudgetProfile from './pages/BudgetProfile/BudgetProfile';
 
 function App() {
    const [userData, setUserData] = useState(null);
@@ -113,7 +117,7 @@ function App() {
    return (
       <div className="App">
          <Header />
-
+         {/* <BudgetProfile /> */}
          <h1 className="welcome__text">Welcome {userName}!</h1>
          <section className="banner">
             <div className="banner__item">
