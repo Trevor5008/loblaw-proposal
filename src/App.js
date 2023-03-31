@@ -10,6 +10,7 @@ import './App.scss';
 import Image from 'mui-image';
 import bob from './assets/logos/bob_loblaw_icon.png';
 
+
 function App() {
    return (
      <div className="App">
