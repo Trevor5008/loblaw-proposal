@@ -1,86 +1,110 @@
-@use './partials/_variables.scss' as *;
-@use './partials/_typography.scss' as *;
+@use "./partials/_variables.scss" as *;
+@use "./partials/_typography.scss" as *;
 
+.navBox {
+  width: 100%;
+  flex-grow: 1;
+  position: "fixed";
+  padding: 0;
 
-.navBox { 
-    width: 100%;
-    flex-grow: 1; 
-    position: 'fixed';
-    padding: 0;
-
-    &__toolbar.MuiToolbar-root {
+  &__toolbar.MuiToolbar-root {
     background-color: $loblawBlack;
-    }
+  }
 
-    &__logo.mui-image-img {
-        display: flex;
-        transition: 0;
-        transition-duration: 0s;
-        transition-property: none;
-        animation: none;
-    }
+  &__logo.mui-image-img {
+    display: flex;
+    transition: 0;
+    transition-duration: 0s;
+    transition-property: none;
+    animation: none;
+  }
 
-    &__btn.MuiButtonBase-root  {
-        padding: 0 12px;
-    }
+  &__btn.MuiButtonBase-root {
+    padding: 0 12px;
+  }
 }
 
-#search{
-    background-color: $loblawDarkGrey;
-    border-radius: 0;
+#search {
+  background-color: $loblawDarkGrey;
+  border-radius: 0;
 }
-.nav__search-icon{
-   z-index: 1;
-    margin-left: 1rem;
+.nav__search-icon {
+  z-index: 1;
+  margin-left: 1rem;
 }
-.nav__search-input.MuiInputBase-root{
-    width: calc(100% - 24px);
-    border-radius: .75rem;
-    margin: .25rem .75rem;
-    background-color: white;
+.nav__search-input.MuiInputBase-root {
+  width: calc(100% - 24px);
+  border-radius: 0.75rem;
+  margin: 0.25rem 0.75rem;
+  background-color: white;
 }
 
 .welcome__text {
-   text-transform: uppercase;
-   font-family: $grotesk;
-   margin: 0.5rem 2rem 1rem;
-   font-size: 3rem;
-   letter-spacing: .05px;
+  text-transform: uppercase;
+  font-family: $grotesk;
+  margin: 0.5rem 2rem 1rem;
+  font-size: 3rem;
+  letter-spacing: 0.05px;
 }
 
 .banner {
-   // height: 3rem;
-   width: 100vw;
-   background-color: #83000c;
-   border: 2.5px solid $loblawRed;
-   display: flex;
-   justify-content: space-evenly;
-   padding-top: 1rem;
-   padding-bottom: 1rem;
-   
-   &__text,
-   &__value {
-      color: white;
-   }
+  // height: 3rem;
+  width: 100vw;
+  background-color: #83000c;
+  border: 2.5px solid $loblawRed;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-   &__text {
-      font-size: 1.3rem;
-   }
+  &__text,
+  &__value {
+    color: white;
+  }
 
-   &__value {
-      font-size: 3rem;
-      font-weight: 100;
-      text-align: center;
-      margin-top: .5rem;
-   }
+  &__text {
+    font-size: 1.3rem;
+  }
+
+  &__value {
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
 }
 
 .budget {
-   margin: 2rem 1rem;
-   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-   &__title {
-      font-weight: 700;
-      font-size: 2rem;
-   }
+  &__section {
+    margin: 2rem 1rem;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  &__icons{
+    color: #656B73;
+    width: 10rem;
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 0 .5rem;
+  }
+  &__slider.MuiSlider-root{
+    height: 1rem;
+    padding: 2rem 1rem;
+    margin-left: 1.5rem;
+    color: #656B73;
+  }
+  &__subtitle{
+    font-size: 1.25rem;
+    padding-left: 1.75rem;
+    font-weight: 200;
+  }
 }
+
+
