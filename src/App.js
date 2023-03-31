@@ -14,7 +14,8 @@ function App() {
    const [userData, setUserData] = useState(null);
    const [userName, setUserName] = useState("");
    const [totalSpent, setTotalSpent] = useState(0);
-
+  const [budgetTotal, setBudgetTotal] = useState(0);
+  const [budgetVal, setBudgetVal] = useState(0);
    const marks = [
       {
          value: 0,
@@ -50,17 +51,32 @@ function App() {
             setTotalSpent(total);
             setUserName(userName);
             setUserData(userData.data);
+            setBudgetTotal(total);
          });
-   }, [userData]);
+   }, [userData, budgetTotal]);
 
    if (!userName || !userData || !totalSpent) {
       return <h2>Loading...</h2>;
    }
 
+   function handleSubmit(e) {
+    e.preventDefault();
+    console.log(budgetVal);
+    setBudgetTotal(budgetVal);
+
+   }
+   function handleChange(e) {
+    // e.preventDefault();
+   const value = parseInt(e.target.value);
+    console.log(e.target.value);
+    setBudgetVal(value);
+
+   }
+
    return (
      <div className="App">
-         <Header />
-       
+       <Header />
+
        <h1 className="welcome__text">Welcome {userName}!</h1>
        {/* <Form /> */}
        <section className="banner">
@@ -73,6 +89,7 @@ function App() {
            <h2 className="banner__value">$10</h2>
          </div>
        </section>
+
        <div className="budget">
          <section className="budget__section">
            <h2 className="budget__title">Budget Settings</h2>
@@ -81,29 +98,35 @@ function App() {
            <BulletList />
            <ChartIcon />
          </div>
-         <Input 
-            placeholder="Amount"
-            startDecorator={<AttachMoney />}
-            endDecorator={<Button>Set Budget</Button>}
-         /> 
        </div>
+
        <Box width={300}>
+        <form onSubmit={(e) => handleSubmit(e)}>
+         <Input
+           className='budget__input'
+           placeholder="Amount"
+           startDecorator={<AttachMoney />}
+           endDecorator={<Button type="submit">Set Budget</Button>}
+           name="budget"
+           onChange={(e) => handleChange(e)}
+           />
+           
+          </form>
+
          <h2 className="budget__subtitle">Vegetable</h2>
          <Slider
            className="budget__slider"
            defaultValue={70}
-           step={10}
-           max={300}
+           max={budgetTotal}
            aria-label="Small"
-           valueLabelDisplay="auto"
+           valueLabelDisplay="on"
            marks={marks}
          />
          <h2 className="budget__subtitle">Dairy</h2>
          <Slider
            className="budget__slider"
            defaultValue={50}
-           step={10}
-           max={300}
+           max={budgetTotal}
            aria-label="Default"
            valueLabelDisplay="auto"
            marks={marks}
@@ -112,8 +135,7 @@ function App() {
          <Slider
            className="budget__slider"
            defaultValue={50}
-           step={10}
-           max={300}
+           max={budgetTotal}
            aria-label="Default"
            valueLabelDisplay="auto"
            marks={marks}
@@ -123,8 +145,7 @@ function App() {
            className="budget__slider"
            defaultValue={50}
            aria-label="Default"
-           step={10}
-           max={300}
+           max={budgetTotal}
            valueLabelDisplay="auto"
            marks={marks}
          />
