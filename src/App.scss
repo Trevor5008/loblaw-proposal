@@ -1,0 +1,24 @@
+@use './partials/_variables.scss' as *;
+
+.navBox { 
+    width: 100%;
+    flex-grow: 1; 
+    position: 'fixed';
+    padding: 0;
+
+    &__toolbar.MuiToolbar-root {
+    background-color: $loblawBlack;
+    }
+
+    &__logo {
+        display: flex;
+        
+    }
+
+    &__btn.MuiButtonBase-root  {
+        padding: 0 12px;
+    }
+}
+
+
+// 
