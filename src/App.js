@@ -108,7 +108,7 @@ function App() {
        </section>
        <div className="budget">
          <section className="budget__section">
-           <h2 className="budget__title">My Budget</h2>
+           <h2 className="budget__title">Budget Settings</h2>
          </section>
          <div className="budget__icons">
            <BulletList />
