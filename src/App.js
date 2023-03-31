@@ -55,6 +55,7 @@ function App() {
          });
    }, [userData, budgetTotal]);
 
+   console.log(budgetTotal)
    if (!userName || !userData || !totalSpent) {
       return <h2>Loading...</h2>;
    }
