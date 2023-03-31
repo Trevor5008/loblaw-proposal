@@ -13,6 +13,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Header from './components/Header/Header';
+import Preferences from './components/Preferences/Preferences';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -91,6 +92,7 @@ function App() {
            inputProps={{ "aria-label": "search" }}
          />
        </Search>
+
       <h1 className="welcome__text">Welcome You!</h1>
        {/* <Form /> */}
        <section className="banner">
