@@ -119,28 +119,6 @@ function App() {
    }
 
    return (
-     <div className="App">
-       <Box className="navBox">
-         <Header />
-         {/* <AppBar position="static">
-           <Toolbar className="navBox__toolbar">
-             <IconButton
-               size="large"
-               edge="start"
-               color="inherit"
-               aria-label="menu"
-               className="navBox__btn"
-             >
-               <MenuIcon />
-               <Image src={bob} className="navBox__logo" duration={0} />
-             </IconButton>
-             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-               News
-             </Typography>
-             <Button color="inherit">Login</Button>
-           </Toolbar>
-         </AppBar> */}
-       </Box>
       <div className="App">
          <Header />
 
